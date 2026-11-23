@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#todo-input:focus {
+  border-color: #667eea;
+}
+
+#todo-form button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#todo-form button:hover {
+  background: #5a67d8;
+}
+
+#todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7fafc;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #edf2f7;
+  transition: transform 0.15s;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #2d3748;
+  cursor: pointer;
+  word-break: break-word;
+  margin-right: 10px;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-edit {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.btn-delete {
+  background: #fff5f5;
+  color: #e53e3e;
+}
